@@ -14,9 +14,8 @@ In this infrastructure nodes are discovered by consul which is a DNS service dis
 
 WARNING: Don’t forget to reimport node definition files by Occopus every time you modify them. 
 Also make sure that you "auth_data" file have resouce to docker plugins. For this add the following lines to the auth_data file:
-       -
-type: docker
-        
+      
+       -type: docker
 	auth_data: unused 
 
 STEPS TO INSTALL THE PROJECT
