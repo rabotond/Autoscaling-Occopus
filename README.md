@@ -12,7 +12,12 @@ The architecture consists of 4 node types which are:
 
 In this infrastructure nodes are discovered by consul which is a DNS service discovery software and monitored by Prometheus, a monitoring software which support alert definitions which later will help you write custom scaling events. Incoming traffic from the user is go through the load balancers to the appropriate data node where your application should be run.
 
-WARNING: Don’t forget to reimport node definition files by Occopus every time you modify them.
+WARNING: Don’t forget to reimport node definition files by Occopus every time you modify them. 
+Also make sure that you "auth_data" file have resouce to docker plugins. For this add the following lines to the auth_data file:
+       -
+type: docker
+        
+	auth_data: unused 
 
 STEPS TO INSTALL THE PROJECT
 
